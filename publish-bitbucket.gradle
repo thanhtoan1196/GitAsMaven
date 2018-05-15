@@ -9,9 +9,9 @@ configurations {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    deployLibrary "ar.com.synergian:wagon-git:0.2.0"
+    deployLibrary "ar.com.synergian:wagon-git:0.2.3"
 }
 
 task androidJavadocs(type: Javadoc) {
