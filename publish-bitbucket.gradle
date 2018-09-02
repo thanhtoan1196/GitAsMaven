@@ -75,13 +75,13 @@ uploadArchives {
 }
 
 def urlExists(String repositoryUrl) {
+println("Basic " + getBase64EncodedCredentials())
+	println(repositoryUrl)
 
     try {
         def connection = (HttpURLConnection) new URL(repositoryUrl).openConnection()
 
         connection.setRequestProperty("Authorization", "Basic " + getBase64EncodedCredentials())
-	println("Basic " + getBase64EncodedCredentials())
-	println(repositoryUrl)
 	
         connection.setConnectTimeout(10000)
         connection.setReadTimeout(10000)
